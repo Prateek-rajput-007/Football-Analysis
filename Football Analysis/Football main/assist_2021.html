@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="assist_2021.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="12.png">
+    <title>Players Statistics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+    <h1>2020/2021 Football Competitions</h1>
+    <h1>Players Statistics</h1>
+    <div class="competitions_list_container">
+        <ul>
+            <li><a href="index.html">Goals EURO 2020</a></li>
+            <li><a href="assist_2021.html">Assists EURO 2020</a></li>
+            <li><a href="goal_copa_2021.html">Goals Copa America 2021</a></li>
+            <li><a href="assist_copa_2021.html">Assists Copa America 2021</a></li>
+        </ul>
+    </div>
+    <h3 id="all_goals">All assists: </h3>
+    <div class="select_chart">
+        <input type="radio" id="bar_radio" name="chart_type" value="bar" onchange="switch_to('bar')" checked>
+        <label for="bar_radio">Bar chart</label>
+        <input type="radio" id="pie_radio" name="chart_type" value="pie" onchange="switch_to('pie')">
+        <label for="pie_radio">Pie chart</label>
+        <p>
+            <input type="checkbox" id="one_goal" onchange="modify_one_goal(this, 'Assists')">
+            <label for="one_goal">Include single assists</label>
+        </p>
+    </div>
+    <div id='container'></div>
+    <footer>
+        <p>Data source: <a href="https://en.wikipedia.org/wiki/UEFA_Euro_2020" target="_blank">Wikipedia</a></p>
+        <p>Source code and contact: <a href="https://github.com/Prateek000070/Web-Scrapping-Project" target="_blank">Github</a></p>
+    </footer>
+    <!-- it fixes drawing issue on safari version <14 on iphone -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js"></script>
+    <script src="js/data_assists_2021.js"></script>
+    <script src="js/functions.js"></script>
+    <script>
+        start(playerData, "Assists");
+    </script>
+</body>
+
+</html>

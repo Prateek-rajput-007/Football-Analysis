@@ -1,0 +1,76 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+canvas {
+    margin: 20px;
+    margin-bottom: 50px;
+    max-height: 750px;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+    margin-right: 5%;
+}
+
+div.select_chart {
+    text-align: center;
+}
+
+.pie_chart_class {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container {
+    width: 85%;
+    margin: auto;
+}
+
+.competitions_list_container {
+    text-align: center;
+}
+
+.competitions_list_container ul {
+    border: 2px solid black;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 2px;
+}
+
+.competitions_list_container li {
+    display: inline-block;
+}
+
+.competitions_list_container li a {
+    display: inline-block;
+    background: rgb(102, 102, 102);
+    color: #FFF;
+    padding: 5px;
+    text-decoration: none;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+  h1{
+    width: 100%;
+    background-color: red;
+    color: white;
+    
+    position: sticky;
+    top: 0;
+  }
